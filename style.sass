@@ -1,0 +1,52 @@
+// white
+$body: #f6f7fa
+// orange
+$primary1: #fd9551
+// blue
+$primary2: #52bee5
+
+$primary: $body
+$link: $primary1
+$info: $primary2
+
+html, body
+	background-color: $primary
+
+body 
+	margin: auto 2%
+
+.title, .subtitle
+	color: $primary !important
+
+#mainHero
+	position: relative
+	background-image: url("buddha.jpg")
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	margin-top: 2%
+
+.header
+	text-align: center
+
+#welcome
+	background-color: $link
+
+.clearfix::after 
+	content: ""
+	clear: both
+	display: table
+
+.left
+	float: left
+	width: 50%
+
+.right
+	float: right
+	width: 50%
+
+#offer
+	color: #333
+
+
+@import "node_modules/bulma/bulma.sass"

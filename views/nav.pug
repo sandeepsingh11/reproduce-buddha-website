@@ -1,0 +1,24 @@
+nav.navbar.is-fixed-top(role='navigation', aria-label='main navigation')
+	.navbar-brand
+		a.navbar-item(href='http://preview.themeforest.net/item/great-lotus-buddhist-temple-wordpress-theme/full_screen_preview/21661413') [logo]
+
+		a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded="false", data-target="navContent")
+			span(aria-hidden='true')
+			span(aria-hidden='true')
+			span(aria-hidden='true')
+		
+	#navContent.navbar-menu
+		.navbar-start
+			a.navbar-item(href='/') Home
+
+			.navbar-item.has-dropdown.is-hoverable
+				a.navbar-link(href='more.pug') Classes & Events
+				.navbar-dropdown
+					a.navbar-item(href='/') Classes
+					a.navbar-item(href='/') Events
+					a.navbar-item(href='/') Temple Activities
+
+			a.navbar-item(href='#') About the Temple
+			a.navbar-item(href='#') Meditation Classes
+			a.navbar-item(href='#') Contact
+			a.navbar-item(href='#') Donate
