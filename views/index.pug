@@ -7,21 +7,22 @@ html
 		script(src='https://code.jquery.com/jquery-3.3.1.js')
 		script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
 
+		script
+			include ../func.js
+			include mixins.pug
 		style
 			include ../style.css
 
+		
 		body
 			//- get navigation
 			include nav.pug
 
-			//- main hero banner
-			section#mainHero.hero.is-large
-				.hero-body
-
+			//- main content
 			.content
 				//- latest posts
 				section#posts
-					h2.header.has-text-centered Latest Posts
+					+header('Latest Posts')
 					.columns
 						.column
 							.postImg
@@ -33,7 +34,7 @@ html
 										p 11 Nov
 							h3 Lorem ipsum dolor
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin...
-							button.button more info
+							button.button.is-primary.is-primary more info
 						.column
 							.postImg
 								a(href='#')
@@ -44,7 +45,7 @@ html
 										p 14 Mar
 							h3 Lorem ipsum dolor
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin...
-							button.button more info
+							button.button.is-primary more info
 						.column
 							.postImg
 								a(href='#')
@@ -55,54 +56,63 @@ html
 										p 5 mar
 							h3 Lorem ipsum dolor
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin...
-							button.button more info
+							button.button.is-primary more info
 
 				//- library and photo gallery
 				section.is-clearfix
 					.left(style='width: 33%')
-						h2 Library
+						+header('Library')
 						p Cel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum augue duis
 						h4 You can download such books:
-						ul
-							li Autem vel eum iriure dolor in 2013
-							li Seem vel eum iriure dolor in
-							li Eum iriure dolor in t esse molestie consequat, vel
-							li Wtem vel eum iriure dolor
-							li Wtem vel eum iriure dolor
+						a(href='#') Autem vel eum iriure dolor in 2013
+						br
+						a(href='#') Seem vel eum iriure dolor in
+						br
+						a(href='#') Eum iriure dolor in t esse molestie consequat, vel
+						br
+						a(href='#') Wtem vel eum iriure dolor
+						br
+						a(href='#') Wtem vel eum iriure dolor
 					.right(style='width: 66%')
-						h2 Photo Gallery
-							.columns
-								.column
-									img(src='leaves.jpg')
-								.column
-									img(src='leaves.jpg')
-								.column
-									img(src='leaves.jpg')
-								.column
-									img(src='leaves.jpg')
-							.columns
-								.column
-									img(src='leaves.jpg')
-								.column
-									img(src='leaves.jpg')
-								.column
-									img(src='leaves.jpg')
-								.column
-									img(src='leaves.jpg')
-						button.button all photos
+						+header('Photo Gallery')
+						.columns
+							.column
+								img(src='leaves.jpg')
+							.column
+								img(src='leaves.jpg')
+							.column
+								img(src='leaves.jpg')
+							.column
+								img(src='leaves.jpg')
+						.columns
+							.column
+								img(src='leaves.jpg')
+							.column
+								img(src='leaves.jpg')
+							.column
+								img(src='leaves.jpg')
+							.column
+								img(src='leaves.jpg')
+						button.button.is-primary all photos
 
 				//- newsletter and about
 				section#newsAbout.is-clearfix
-					.left(style='width: 33%; background-color: #bcbcbc')
-						h2 Newsletter
-						.field
-							.control
-								input.input(type='text', placeholder='Enter your email')
-								button.button Sign up
-					.right(style='width: 66%')
-						h2 About Our Community
-						h4 LOREM IPSUM DOLOR SIT AMET, CONSECTETUER adipiscing
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In faucibus, risus eu volutpat pellentesque, massa felis feugiat velit, nec mattis felis elit a eros. Cras convallis sodales orci, et pretium sapien egestas quis. Donec tellus leo, scelerisque in facilisis a, laoreet vel quam. Suspendisse...
+					.left(style='width: 370px; background-color: #bcbcbc')
+						div(style='padding: 10px 20px')
+							.header(style='margin-bottom: 20px')
+								img(src='logo-left.png')
+								h2.header(style='color: white; font-size: 2em;') Newsletter
+								img(src='logo-right.png')
+							.field
+								.control(style='text-align: right')
+									input.input(style='box-sizing: border-box; display: block; margin-bottom: 15px', type='text', placeholder='Enter your email')
+									button.button.is-primary Sign up
+						img(src='form-bottom.png', style='position: absolute;')
+					.right.has-text-centered(style='width: 66%')
+						+header('About Our Community')
+						div(style='margin: auto 10%')
+							h6(style='margin: 0') LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING
+							p(style='font-size: 0.8em') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In faucibus, risus eu volutpat pellentesque, massa felis feugiat velit, nec mattis felis elit a eros. Cras convallis sodales orci, et pretium sapien egestas quis. Donec tellus leo, scelerisque in facilisis a, laoreet vel quam. Suspendisse...
 
 			//- get footer
 			include footer.pug

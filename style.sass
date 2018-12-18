@@ -1,14 +1,13 @@
 // white
 $body: #f6f7fa
-// orange
-$primary1: #d06e0a
-// blue
-$primary2: #52bee5
+
 // sleek black
 $accent: #272727
 
 // override Bulma vars
-$primary: $body
+// orange
+$primary: #d06e0a
+$link: $primary
 
 // import some Bulma styles
 @import "node_modules/bulma/sass/utilities/_all.sass"
@@ -16,11 +15,11 @@ $primary: $body
 @import "node_modules/bulma/sass/base/helpers.sass"
 @import "node_modules/bulma/sass/components/card.sass"
 @import "node_modules/bulma/sass/components/dropdown.sass"
-@import "node_modules/bulma/sass/components/level.sass"
 @import "node_modules/bulma/sass/components/navbar.sass"
 @import "node_modules/bulma/sass/elements/button.sass"
 @import "node_modules/bulma/sass/elements/container.sass"
 @import "node_modules/bulma/sass/elements/content.sass"
+@import "node_modules/bulma/sass/elements/form.sass"
 @import "node_modules/bulma/sass/elements/progress.sass"
 @import "node_modules/bulma/sass/grid/columns.sass"
 @import "node_modules/bulma/sass/layout/_all.sass"
@@ -28,29 +27,31 @@ $primary: $body
 
 
 
-.button.is-primary
-	color: $black
 
-.is-primary1
-	background-color: $primary1
-	color: $white
-
-.is-primary2
-	background-color: $primary2
+.is-primary
+	background-color: $primary
 	color: $white
 
 html, body
-	background-color: $primary
+	background-color: $body
 	color: $black
 	margin: 0px
 	font-size: 20px
+	font-family: Verdana
 
 .banner
 	background-color: $accent
 
-.logo
+.logoBar
 	text-align: center
 	padding: 15px 0px
+
+#logo
+	margin: auto 30px
+
+#nav
+	position: absolute
+	top: -2px
 
 #navContent img
 	display: block
@@ -63,6 +64,18 @@ html, body
 	top: 20%
 	margin: 0px auto
 
+.column
+	padding: 0.75rem 5px
+
+.navbar-item
+	padding: 0
+
+a.navbar-item:hover
+	color: $primary
+
+.navbar-dropdown .navbar-item
+	color: $white
+
 #mainHero
 	position: relative
 	background-image: url("buddha.jpg")
@@ -73,12 +86,26 @@ html, body
 .content
 	margin: auto 4%
 
+.content h2
+	font-size: 3em
+
+section
+	margin-bottom: 30px
+
+.header
+	text-align: center
+	
+.header h2
+	display: inline
+	margin: auto 1%
+	margin-top: 0
+
 .postImg
 	position: relative
 
 .postImg p
 	margin: 0
-	color: $primary
+	color: $body
 
 .dateComp
 	position: absolute
@@ -93,9 +120,13 @@ html, body
 #posts h3
 	margin-top: 0.5em
 
-#newsAbout .left::after
-	background-image: url('form-bottom.png')
+.button
+	border: none
+	border-radius: 25px
+	padding: 0px 15px
 
+.button.is-primary:hover
+	background-color: $accent
 
 .left
 	float: left
