@@ -10,212 +10,99 @@ html
 		style
 			include ../style.css
 
-		body.has-navbar-fixed-top
+		body
 			//- get navigation
 			include nav.pug
 
 			//- main hero banner
-			section#mainHero.hero.is-medium
+			section#mainHero.hero.is-large
 				.hero-body
-					.container
-						h1.title Buddhism and Meditation
-						h3.subtitle For the Modern World
-						button.button.is-info Join Us
 
-			//- content under hero
-			section#subHero
-				nav.level
-					.level-item.has-text-centered
-						a(href='#')
-							img(src='miniBuddha.png')
-							h3 Ongoing Programs
-					.level-item.has-text-centered
-						a(href='#')
-							img(src='elephant.png')
-							h3 Retreats
-					.level-item.has-text-centered
-						a(href='#')
-							img(src='om.png')
-							h3 Special Events
-				nav.level
-					.level-right
-						.level-item
-							div
-								h3 Dharma
-								p “What Zen means by being detached is not being without emotion or feeling, but being one in whom feeling is not sticky or blocked, and through whom the experiences of the world pass like the reflections of birds flying over water.”
-								p -Alan Watts
-
-			//- welcome content
-			section#welcome.clearfix
-				.header.left.is-link
-					.hero.is-medium
-						.hero-body
-							p [img]
-							h2 Everyone Welcome
-							p We are a Buddhist temple built in 1982, and we are at the service of the community. Come and pray with the monks, attend our special events or just spend a quiet moment in front of our Buddha Statue. You are going to experience an internal moment of peace and joy.
-							button.button.is-primary More About Us
-				.right
-					img(src='offering.jpg')
-
-			//- services offered
-			section#offer
-				.header
-					p [img]
-					h2 What We Offer
-					p We gather to make our commitment to become free from suffering, help people with their spiritual growth and provide a safe and friendly space for nurturing holistic well-being.
-				nav.level
-					.level-item.has-text-centered
-						.card
-							.card-image
-								figure
-									p [img]
-							.card-content
-								h2
-									a(href='#') Learn the Dharma
-								p We offer Buddhism 101 classes regularly, have an active Study Group
-								button.button.is-link Learn More
-					.level-item.has-text-centered
-						.card
-							.card-image
-								figure
-									p [img]
-							.card-content
-								h2
-									a(href='#') Sunday Morning Services
-								p Every Sunday at 11:00 am EST, we conduct Buddhist Services
-								button.button.is-info Learn More
-					.level-item.has-text-centered
-						.card
-							.card-image
-								figure
-									p [img]
-							.card-content
-								h2
-									a(href='#') Cultural Programs
-								p We offer Buddhism 101 classes regularly, have an active Study Group
-								button.button.is-link Learn More
-
-			//- begginers info
-			section#beginners
-				.header
-					p [img]
-					h2 Beginners' Classes
-				div
-					div
-						p [img]
-					div.is-link
-						h3 Tuesday Evening
-						p Transforming your life through loving kindness. Tuesdays 7.30 – 9 pm in the Temple. Suitable for everyone, these classes focus on how to meditate and use Buddhist understanding to solve daily problems.
-						button.button.is-primary Read More
-				nav.level
-					.level-item.has-text-centered
-						h3 World Peace
-						p This uplifting class includes a short teaching session, guided meditations and inspiring prayers.
-						p [img] Sunday 10.30 - 11.45am
-						p [img] This class is free.
-					.level-item.has-text-centered
-						h3 Kids' Club
-						p Family fun with meditations, games, stories, and activities. Children will be gently guided in relaxing meditations.
-						p [img] Sunday 10.30 - 11.45am
-						p [img] Class fee: $4
-					.level-item.has-text-centered
-						h3 Daily
-						p FREE 15 minute meditation in the Temple. Everyone is welcome to join these free 15 minute guided meditations.
-						p [img] Every day at 12.30pm and 2pm
-						p [img] This class is free.
-
-			//- monk info
-			section.hero.is-medium
-				.hero-body
-					.container
-						h2.title Abbot & Monks
-						h3.subtitle Several monks reside at Great Lotus. Their exact number depends on the current events or activities: Buddhist rites and Thai culture ceremonies. Occasionally, monks are invited to do the blessing outside of their temple - at private residences or businesses.
-						button.button.is-info Read More
-
-			//- donation panel
-			section#donations
-				.header
-					p [img]
-					h2 Donations
-					p This Temple is self-supporting through your donations alone. Your contributions allow the Temple to continue its programs and outreach.
-				.card
-					.card-content
-						h2
-							a(href='#') Support the new cafeteria
-						div
-							div
-								progress.progress.is-link(value='7560', max='27000')
-								nav.level
-									.level-left
-										.level-item.has-text-centered
-											p $27000.00
-									.level-right
-										.level-item.has-text-centered
-											p $7560.00
-							div
-								h2 28%
+			.content
+				//- latest posts
+				section#posts
+					h2.header.has-text-centered Latest Posts
+					.columns
+						.column
+							.postImg
 								a(href='#')
-									button.button Donate Now
-				.card
-					.card-content
-						h2
-							a(href='#') At the temple we constantly undergo repairs and improvements
-						div
-							div
-								progress.progress.is-link(value='3000', max='4000')
-								nav.level
-									.level-left
-										.level-item.has-text-centered
-											p $4000.00
-									.level-right
-										.level-item.has-text-centered
-											p $3000.00
-							div
-								h2 75%
+									img(src='mindfulness.jpg')
+								.dateComp.has-text-centered
+									img(src='date.png')
+									div
+										p 11 Nov
+							h3 Lorem ipsum dolor
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin...
+							button.button more info
+						.column
+							.postImg
 								a(href='#')
-									button.button Donate Now
+									img(src='rocks.jpg')
+								.dateComp.has-text-centered
+									img(src='date.png')
+									div
+										p 14 Mar
+							h3 Lorem ipsum dolor
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin...
+							button.button more info
+						.column
+							.postImg
+								a(href='#')
+									img(src='water.jpg')
+								.dateComp.has-text-centered
+									img(src='date.png')
+									div
+										p 5 mar
+							h3 Lorem ipsum dolor
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin...
+							button.button more info
 
-			//- news and events
-			section#newsEvents
-				.header
-					p [img]
-					h2 Latest News & Events
-				.level
-					.level-item.has-text-centered
-						p [img]
-						h4 OCTOBER 15, 2017
-						h2
-							a(href='#') Do You Need a Buddhism Teacher?
-						p Massa curabitur ultrices, mollis amet tellus torquent vel nunc integer, lectus laoreet eu
-				.level-item.has-text-centered
-						p [img]
-						h4 OCTOBER 15, 2017
-						h2
-							a(href='#') No Doublt, No Awakening
-						p Massa curabitur ultrices, mollis amet tellus torquent vel nunc integer, lectus laoreet eu
-				.level-item.has-text-centered
-						p [img]
-						h4 OCTOBER 15, 2017
-						h2
-							a(href='#') Top 5 Buddhist Books for Newbies
-						p Massa curabitur ultrices, mollis amet tellus torquent vel nunc integer, lectus laoreet eu 
-				.level-item.has-text-centered
-						p [img]
-						h4 OCTOBER 15, 2017
-						h2
-							a(href='#') What is True Happiness?
-						p Massa curabitur ultrices, mollis amet tellus torquent vel nunc integer, lectus laoreet eu
-				button.button.is-info More Articles
+				//- library and photo gallery
+				section.is-clearfix
+					.left(style='width: 33%')
+						h2 Library
+						p Cel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum augue duis
+						h4 You can download such books:
+						ul
+							li Autem vel eum iriure dolor in 2013
+							li Seem vel eum iriure dolor in
+							li Eum iriure dolor in t esse molestie consequat, vel
+							li Wtem vel eum iriure dolor
+							li Wtem vel eum iriure dolor
+					.right(style='width: 66%')
+						h2 Photo Gallery
+							.columns
+								.column
+									img(src='leaves.jpg')
+								.column
+									img(src='leaves.jpg')
+								.column
+									img(src='leaves.jpg')
+								.column
+									img(src='leaves.jpg')
+							.columns
+								.column
+									img(src='leaves.jpg')
+								.column
+									img(src='leaves.jpg')
+								.column
+									img(src='leaves.jpg')
+								.column
+									img(src='leaves.jpg')
+						button.button all photos
 
-			//- sign up for newsletter
-			section#newsletter.is-info
-				.hero-body
-					.container
-						h2.title Keep up-to-date with Great Lotus Buddhist Temple
+				//- newsletter and about
+				section#newsAbout.is-clearfix
+					.left(style='width: 33%; background-color: #bcbcbc')
+						h2 Newsletter
 						.field
 							.control
-								input.input(type='text', placeholder='Enter email address')
-								button.button.is-primary Submit
+								input.input(type='text', placeholder='Enter your email')
+								button.button Sign up
+					.right(style='width: 66%')
+						h2 About Our Community
+						h4 LOREM IPSUM DOLOR SIT AMET, CONSECTETUER adipiscing
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In faucibus, risus eu volutpat pellentesque, massa felis feugiat velit, nec mattis felis elit a eros. Cras convallis sodales orci, et pretium sapien egestas quis. Donec tellus leo, scelerisque in facilisis a, laoreet vel quam. Suspendisse...
 
 			//- get footer
 			include footer.pug
