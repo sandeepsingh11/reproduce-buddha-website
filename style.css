@@ -7201,9 +7201,14 @@ html, body {
   margin: auto 30px;
 }
 
+.hero-body {
+  padding: 0;
+}
+
 #nav {
   position: absolute;
   top: -2px;
+  left: 2%;
 }
 
 #navContent img {
@@ -7231,12 +7236,15 @@ a.navbar-item:hover {
   color: white;
 }
 
-#mainHero {
+#heroCarousel div {
   position: relative;
-  background-image: url("buddha.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.slick-dots li button:before {
+  font-size: 40px;
 }
 
 .content {
@@ -7293,8 +7301,35 @@ section {
   padding: 0px 15px;
 }
 
-.button.is-primary:hover {
+.button.is-primary:hover, .slick-prev:hover, .slick-next:hover {
   background-color: #272727;
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -35px;
+}
+
+.slick-prev, .slick-next, .slick-prev:focus, .slick-next:focus {
+  background-color: #d06e0a;
+  border-radius: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: content-box;
+}
+
+#appendArrows .slick-prev, #appendArrows .slick-next {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 10px;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
 }
 
 .left {

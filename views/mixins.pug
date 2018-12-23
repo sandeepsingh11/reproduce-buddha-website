@@ -1,5 +1,47 @@
+//- section header
 mixin header(title)
 	.header
 		img(src='title-left.png')
 		h2= title
 		img(src='title-right.png')
+
+// hero carousel
+- var heros = ['buddha.jpg', 'pray.jpg', 'temple.jpg', 'seashore.jpg']
+
+mixin heroCarousel()
+	#heroCarousel
+		each hero in heros
+			div(style='height: 600px; background-image: url(' + hero + ')')
+
+// populate photo gallery
+- var n = 0
+- var even = true
+
+mixin photoCarousel()
+	#photos
+		while n < 20
+			if n < 10
+				if even
+					img(src='leaves.jpg')
+					- even = false
+				else
+					img(src='mindfulness.jpg')
+					- even = true
+			else
+				if even
+					img(src='lily.jpg')
+					- even = false
+				else
+					img(src='rocks.jpg')
+					- even = true
+			- n++
+
+// 'About Our Community' carousel
+- var title = ['LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING', 'PHASELLUS EUISMOD METUS QUIS CURSUS CURSUS', 'VIVAMUS AUCTOR NUNC IACULIS LIBERO ALIQUAM']
+
+mixin aboutCarousel()
+	.fade(style='position: relative')
+		each thisTitle in title
+			div
+				h6(style='margin: 0')= thisTitle
+				p(style='font-size: 0.8em') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In faucibus, risus eu volutpat pellentesque, massa felis feugiat velit, nec mattis felis elit a eros. Cras convallis sodales orci, et pretium sapien egestas quis. Donec tellus leo, scelerisque in facilisis a, laoreet vel quam. Suspendisse...

@@ -5,8 +5,9 @@
 			img#logo(src='logo.png')
 			img(src='logo-right.png')
 
-section#mainHero.hero.is-large
+section.hero(style='position: relative')
 	//- main hero banner
+	+heroCarousel()
 	.hero-body
 		.hero-content
 

@@ -6,11 +6,15 @@ html
 
 		script(src='https://code.jquery.com/jquery-3.3.1.js')
 		script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+		//- script(src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
 
 		script
+			include ../node_modules/slick-carousel/slick/slick.js
 			include ../func.js
 			include mixins.pug
 		style
+			include ../node_modules/slick-carousel/slick/slick.css
+			include ../node_modules/slick-carousel/slick/slick-theme.css
 			include ../style.css
 
 		
@@ -75,25 +79,13 @@ html
 						a(href='#') Wtem vel eum iriure dolor
 					.right(style='width: 66%')
 						+header('Photo Gallery')
-						.columns
-							.column
-								img(src='leaves.jpg')
-							.column
-								img(src='leaves.jpg')
-							.column
-								img(src='leaves.jpg')
-							.column
-								img(src='leaves.jpg')
-						.columns
-							.column
-								img(src='leaves.jpg')
-							.column
-								img(src='leaves.jpg')
-							.column
-								img(src='leaves.jpg')
-							.column
-								img(src='leaves.jpg')
-						button.button.is-primary all photos
+						+photoCarousel()
+						.is-clearfix
+							.left
+								button.button.is-primary all photos
+							.right
+								#appendArrows(style='position: relative; text-align: right')
+								
 
 				//- newsletter and about
 				section#newsAbout.is-clearfix
@@ -111,8 +103,7 @@ html
 					.right.has-text-centered(style='width: 66%')
 						+header('About Our Community')
 						div(style='margin: auto 10%')
-							h6(style='margin: 0') LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING
-							p(style='font-size: 0.8em') Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris sollicitudin dignissim. Phasellus ultrices tellus eget ipsum ornare molestie scelerisque eros dignissim. Phasellus fringilla hendrerit lectus nec vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In faucibus, risus eu volutpat pellentesque, massa felis feugiat velit, nec mattis felis elit a eros. Cras convallis sodales orci, et pretium sapien egestas quis. Donec tellus leo, scelerisque in facilisis a, laoreet vel quam. Suspendisse...
+							+aboutCarousel()
 
 			//- get footer
 			include footer.pug
