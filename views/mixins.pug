@@ -20,21 +20,30 @@ mixin heroCarousel()
 mixin photoCarousel()
 	#photos
 		while n < 20
-			if n < 10
-				if even
-					img(src='leaves.jpg')
-					- even = false
+			.photoHover(style='position: relative')
+				if n < 10
+					if even
+						img(src='leaves.jpg')
+						.photoAnimation
+						img.animate(src='plus.gif')
+						- even = false
+					else
+						img(src='mindfulness.jpg')
+						.photoAnimation
+						img.animate(src='plus.gif')
+						- even = true
 				else
-					img(src='mindfulness.jpg')
-					- even = true
-			else
-				if even
-					img(src='lily.jpg')
-					- even = false
-				else
-					img(src='rocks.jpg')
-					- even = true
-			- n++
+					if even
+						img(src='lily.jpg')
+						.photoAnimation
+						img.animate(src='plus.gif')
+						- even = false
+					else
+						img(src='rocks.jpg')
+						.photoAnimation
+						img.animate(src='plus.gif')
+						- even = true
+				- n++
 
 // 'About Our Community' carousel
 - var title = ['LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING', 'PHASELLUS EUISMOD METUS QUIS CURSUS CURSUS', 'VIVAMUS AUCTOR NUNC IACULIS LIBERO ALIQUAM']

@@ -13,6 +13,34 @@ $(document).ready(function() {
 		}
 	});
 
+
+	// post hover effect
+	var posts = $('.postImg');
+
+	posts.hover(function () {
+		var animation = $(this).children()[2];
+		$(animation).css('height', '256.3px').css('top', '0');
+	}, function() {
+		var animation = $(this).children()[2];
+		$(animation).css('height', '0%').css('top', '50%');
+	});
+
+	// photo hover effect
+	var photos = $('.photoHover');
+
+	photos.hover(function () {
+		var animation1 = $(this).children()[1];
+		$(animation1).css('opacity', '0.5');
+		var animation2 = $(this).children()[2];
+		$(animation2).css('opacity', '1');
+	}, function() {
+		var animation1 = $(this).children()[1];
+		$(animation1).css('opacity', '0');
+		var animation2 = $(this).children()[2];
+		$(animation2).css('opacity', '0');
+	});
+
+
 	$('#heroCarousel').slick({
 		dots: true,
 		arrows: false,
